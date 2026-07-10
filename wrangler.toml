@@ -1,0 +1,11 @@
+name = "linkael"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+[[kv_namespaces]]
+binding = "LINKS"
+id = "4fcfb99a4def4cc3916362db0f594ce7"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
