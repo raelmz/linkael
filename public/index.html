@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkael | Encurtador de Links Serverless</title>
+  <meta name="description" content="Encurtador de links serverless com Cloudflare Workers e KV, com contador de cliques e QR code automático.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+
+    <!-- Coluna Esquerda: Informações e Texto -->
+    <section class="hero-section" aria-labelledby="titulo-principal">
+      <div class="brand-row">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        </div>
+        <span class="brand-name">Linkael</span>
+      </div>
+
+      <div class="hero-content">
+        <span class="eyebrow">Cloudflare Workers + KV</span>
+        <h1 id="titulo-principal">Links curtos, rápidos e com dados de verdade.</h1>
+        <p>
+          Cole uma URL longa, escolha um código personalizado se quiser, e gere um link limpo
+          com redirecionamento ultrarrápido pela borda da Cloudflare — com QR code e contador
+          de cliques inclusos.
+        </p>
+      </div>
+
+      <div class="feature-list" aria-label="Destaques do projeto">
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-text">
+            <strong>Arquitetura Serverless</strong>
+            <span>Sem servidor tradicional em execução contínua, rodando na borda da Cloudflare.</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🗄️</div>
+          <div class="feature-text">
+            <strong>Cloudflare KV Distribuído</strong>
+            <span>Armazena código, URL original e contador de cliques na borda.</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <div class="feature-text">
+            <strong>Estatísticas em tempo real</strong>
+            <span>Acompanhe quantos cliques cada link recebeu, direto pela API.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coluna Direita: Formulário/Card -->
+    <section class="shortener-wrapper">
+      <div class="shortener-card" aria-labelledby="form-title">
+        <div class="card-header">
+          <span class="status-dot"></span>
+          <span class="status-text">Encurtador ativo</span>
+        </div>
+
+        <h2 id="form-title">Criar link curto</h2>
+        <p class="form-intro">Use URLs válidas com <strong>http://</strong> ou <strong>https://</strong>.</p>
+
+        <form onsubmit="event.preventDefault();">
+          <div class="grupo-input">
+            <label for="url">URL original</label>
+            <input id="url" type="url" inputmode="url" placeholder="https://exemplo.com/sua-url-longa-aqui" autocomplete="url" required>
+          </div>
+
+          <div class="grupo-input">
+            <label for="codigo-custom">Código personalizado <span>(opcional)</span></label>
+            <div class="input-prefix">
+              <span class="prefix">linkael.dev/</span>
+              <input id="codigo-custom" type="text" placeholder="meu-link" autocomplete="off" maxlength="20">
+            </div>
+          </div>
+
+          <button id="btn" type="button">Encurtar link</button>
+        </form>
+
+        <p id="erro" class="erro" role="alert"></p>
+
+        <div id="resultado" class="resultado" aria-live="polite">
+          <span class="resultado-label">🎉 Link curto gerado com sucesso!</span>
+          <a id="link-curto" href="#" target="_blank" rel="noopener noreferrer"></a>
+
+          <div class="resultado-actions">
+            <button id="btn-copiar" type="button" class="btn-secondary">Copiar link</button>
+          </div>
+
+          <img id="qr-code" class="qr-code" alt="QR code do link curto" width="140" height="140">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
