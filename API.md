@@ -1,6 +1,6 @@
 # API do Linkael
 
-Base URL (produção): `https://linkael.SEU-SUBDOMINIO.workers.dev`
+Base URL (produção): `https://linkael.raelmz.workers.dev`
 
 ## `POST /api/shorten`
 
@@ -22,7 +22,7 @@ Cria um novo link curto.
 
 ```json
 {
-  "link": "https://linkael.workers.dev/meu-link",
+  "link": "https://linkael.raelmz.workers.dev/meu-link",
   "codigo": "meu-link"
 }
 ```

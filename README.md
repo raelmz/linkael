@@ -8,8 +8,8 @@
 
 <br>
 
-[![Aplicação Online](https://img.shields.io/badge/🚀_APLICAÇÃO_ONLINE-0F6E56?style=for-the-badge&logoColor=F1F5F9)](https://linkael.SEU-SUBDOMINIO.workers.dev)
-[![Repositório](https://img.shields.io/badge/📂_REPOSITÓRIO-173404?style=for-the-badge&logoColor=F1F5F9)](https://github.com/SEU-USUARIO/linkael)
+[![Aplicação Online](https://img.shields.io/badge/🚀_APLICAÇÃO_ONLINE-0F6E56?style=for-the-badge&logoColor=F1F5F9)](https://linkael.raelmz.workers.dev)
+[![Repositório](https://img.shields.io/badge/📂_REPOSITÓRIO-173404?style=for-the-badge&logoColor=F1F5F9)](https://github.com/raelmz/linkael)
 
 <br>
 
@@ -225,7 +225,7 @@ linkael/
 > **Pré-requisitos:** Node.js instalado · conta na Cloudflare · Wrangler instalado (ou executado via `npx`)
 
 ```bash
-git clone https://github.com/SEU-USUARIO/linkael.git
+git clone https://github.com/raelmz/linkael.git
 cd linkael
 npm install
 wrangler login
@@ -315,7 +315,7 @@ Documentação completa dos endpoints em [API.md](./API.md).
 
 Desenvolvido por **Israel Menezes**.
 
-[![GitHub](https://img.shields.io/badge/GitHub-SEU--USUARIO-0F6E56?style=flat-square&logo=github&logoColor=F1F5F9)](https://github.com/SEU-USUARIO)
+[![GitHub](https://img.shields.io/badge/GitHub-raelmz-0F6E56?style=flat-square&logo=github&logoColor=F1F5F9)](https://github.com/raelmz)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Israel_Menezes-173404?style=flat-square&logo=linkedin&logoColor=F1F5F9)](https://www.linkedin.com/in/raelmz/)
 [![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-raeldev.vercel.app-444441?style=flat-square&logo=vercel&logoColor=F1F5F9)](https://raeldev.vercel.app)
 
